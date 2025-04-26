@@ -10,9 +10,12 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/jojigames.github.io' : '',
+  // For GitHub Pages deployment with a user/organization site (username.github.io)
+  // Use empty string for basePath since the site will be at the root domain
+  basePath: '',
   trailingSlash: true,
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/jojigames.github.io' : '',
+  // Use empty string for assetPrefix for user/organization sites
+  assetPrefix: '',
 }
 
 export default nextConfig

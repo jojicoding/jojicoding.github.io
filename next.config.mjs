@@ -9,6 +9,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export',
+  distDir: 'dist',
+  basePath: process.env.NODE_ENV === 'production' ? '/jojigames.github.io' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/jojigames.github.io/' : '',
+  trailingSlash: true,
 }
 
 export default nextConfig

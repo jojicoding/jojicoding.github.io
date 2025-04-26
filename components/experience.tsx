@@ -16,7 +16,7 @@ export default function Experience() {
       organization: "Active Inference Institute",
       period: "September 2024 - Present",
       description:
-        "Working on cutting-edge research projects applying active inference principles. First project involved autonomous navigation systems. Currently working on modeling Alzheimer's disease brain under the effects of drugs to aid in diagnosis.",
+        "Working on cutting-edge research projects applying active inference principles. First project involved autonomous navigation systems. Currently working on modeling the acetylcholine system of the brain in Alzheimer's disease under the effects of drugs.",
       skills: ["Active Inference", "Autonomous Systems", "Neuroscience", "Medical Modeling"],
       icon: Brain,
     },

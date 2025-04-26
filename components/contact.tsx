@@ -10,27 +10,40 @@ import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { Mail, MessageSquare, Linkedin, Github, Send } from "lucide-react"
 import { useToast } from "@/hooks/use-toast"
+import { useForm, ValidationError } from '@formspree/react'
 
 export default function Contact() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
+  
+  // Replace "YOUR_FORM_ID" with your actual Formspree form ID
+  const [formState, handleFormspreeSubmit] = useForm("mldbdbvy");
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. I'll get back to you soon.",
-    })
-
-    setIsSubmitting(false)
-    e.currentTarget.reset()
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Use Formspree's submit handler
+    await handleFormspreeSubmit(e);
+    
+    // Only show success if the form was actually submitted
+    if (formState.succeeded) {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      e.currentTarget.reset();
+    } else if (formState.errors) {
+      toast({
+        title: "Error sending message",
+        description: "Please check your form inputs and try again.",
+        variant: "destructive",
+      });
+    }
+    
+    setIsSubmitting(false);
   }
 
   const contactItems = [
@@ -127,12 +140,14 @@ export default function Contact() {
                           Name
                         </label>
                         <Input id="name" name="name" required className="gradient-border bg-secondary" />
+                        <ValidationError prefix="Name" field="name" errors={formState.errors} />
                       </div>
                       <div className="space-y-2">
                         <label htmlFor="email" className="text-sm font-medium">
                           Email
                         </label>
                         <Input id="email" name="email" type="email" required className="gradient-border bg-secondary" />
+                        <ValidationError prefix="Email" field="email" errors={formState.errors} />
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -140,6 +155,7 @@ export default function Contact() {
                         Subject
                       </label>
                       <Input id="subject" name="subject" required className="gradient-border bg-secondary" />
+                      <ValidationError prefix="Subject" field="subject" errors={formState.errors} />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium">
@@ -152,13 +168,14 @@ export default function Contact() {
                         required
                         className="gradient-border bg-secondary"
                       />
+                      <ValidationError prefix="Message" field="message" errors={formState.errors} />
                     </div>
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 transition-opacity"
-                      disabled={isSubmitting}
+                      disabled={isSubmitting || formState.submitting}
                     >
-                      {isSubmitting ? (
+                      {isSubmitting || formState.submitting ? (
                         <span className="flex items-center gap-2">
                           <span className="animate-spin h-4 w-4 border-2 border-current border-t-transparent rounded-full" />
                           Sending...

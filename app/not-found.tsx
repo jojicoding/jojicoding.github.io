@@ -1,20 +1,11 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/navigation'
-
-export default function Custom404() {
-  const router = useRouter()
-  
-  useEffect(() => {
-    // GitHub Pages 404 handling
-    const path = window.location.pathname
-    const pathWithoutBase = path.replace('/jojigames.github.io', '')
-    router.replace(pathWithoutBase)
-  }, [router])
-  
+export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground">
       <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-      <p className="mb-6">Redirecting to the correct path...</p>
+      <p className="mb-6">The page you are looking for does not exist.</p>
+      <a href="/" className="text-blue-500 hover:underline">
+        Return to Home
+      </a>
     </div>
   )
 }

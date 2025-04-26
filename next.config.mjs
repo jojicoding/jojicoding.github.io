@@ -8,13 +8,18 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
   output: 'export',
-  // For GitHub Pages deployment with a user/organization site (username.github.io)
-  // Use empty string for basePath since the site will be at the root domain
-  basePath: '',
+  distDir: 'out',
+  // Default basePath is fine for GitHub Pages
   trailingSlash: true,
-  // Use empty string for assetPrefix for user/organization sites
+  // Disable assetPrefix for username.github.io sites
   assetPrefix: '',
 }
 

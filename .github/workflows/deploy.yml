@@ -35,6 +35,14 @@ jobs:
           NODE_ENV: production
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
+      - name: Verify index.html exists
+        run: |
+          if [ -f "./out/index.html" ]; then
+            echo "index.html exists, proceeding with deployment"
+          else
+            echo "WARNING: index.html not found, copying from public folder"
+            cp ./public/index.html ./out/index.html
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

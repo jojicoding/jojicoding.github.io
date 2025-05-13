@@ -88,12 +88,12 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                         {project.unfinished && (
                           <div className="absolute top-4 right-4">
-                            <Badge className="text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">In Progress</Badge>
+                            <Badge className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">In Progress</Badge>
                           </div>
                         )}
                         {project.comingSoon && (
                           <div className="absolute top-4 right-4">
-                            <Badge className="text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">Coming Soon</Badge>
+                            <Badge className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">Coming Soon</Badge>
                           </div>
                         )}
                       </div>
@@ -104,7 +104,7 @@ export default function Projects() {
                       <CardContent>
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary" className="text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">
+                            <Badge key={tag} variant="secondary" className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">
                               {tag}
                             </Badge>
                           ))}
@@ -112,7 +112,7 @@ export default function Projects() {
                       </CardContent>
                       {project.hasCode && (
                         <CardFooter className="flex justify-start">
-                          <Button variant="outline" size="sm" asChild className="text-[#2dd4bf] bg-transparent px-4 py-2 rounded-md border border-[#2dd4bf] hover:bg-[#2dd4bf]/10">
+                          <Button variant="outline" size="sm" asChild className="text-white bg-transparent px-4 py-2 rounded-md border border-[#2dd4bf] hover:bg-[#2dd4bf]/10">
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                               <Github className="mr-2 h-4 w-4" />
                               Code
@@ -126,7 +126,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex justify-center mt-8 gap-4">
+            <div className="flex justify-center mt-16 gap-4">
               <Button
                 variant="outline"
                 size="icon"

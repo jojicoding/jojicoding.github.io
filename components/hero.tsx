@@ -19,13 +19,27 @@ export default function Hero() {
       {/* Pure black background */}
       <div className="absolute inset-0 bg-black z-0" />
 
-      {/* Subtle gray grid pattern */}
+      {/* Subtle gray grid pattern with faded lines */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div
           className="h-full w-full"
           style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(229,231,235,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(229,231,235,0.07) 1px, transparent 1px)",
+            backgroundImage: `
+              repeating-linear-gradient(
+                to right,
+                transparent 0px,
+                rgba(229,231,235,0.07) 1px,
+                transparent 6px,
+                transparent 40px
+              ),
+              repeating-linear-gradient(
+                to bottom,
+                transparent 0px,
+                rgba(229,231,235,0.07) 1px,
+                transparent 6px,
+                transparent 40px
+              )
+            `,
             backgroundSize: "40px 40px",
           }}
         />

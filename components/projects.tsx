@@ -25,17 +25,16 @@ export default function Projects() {
       hasCode: true,
     },
     {
-      title: "Bayesian Modeling of the Acetylcholine System Under Alzheimer's Disease",
+      title: "Neuroscience Research",
       description:
-        "Ongoing project modeling the acetylcholine system in the brains of those affected with Alzheimer's disease using RxInfer.",
+        "Ongoing project employing artificial intelligence to model neurodegenerative diseases.",
       image: "/images/alzheimers-model.webp",
-      tags: ["Neuroscience", "Bayesian Modeling", "RxInfer", "Alzheimer's Research"],
-      githubUrl: "https://github.com/jojigames/Active-Inference-Healthcare-2026",
-      hasCode: true,
-      unfinished: true,
+      tags: ["Neuroscience", "Artificial Intelligence", "Research", "Science Fair"],
+      githubUrl: "https://github.com/jojicoding/Science-Fair-2026",
+      comingSoon: true,
     },
     {
-      title: "Chatbot Study Tool for Quiz Bowl",
+      title: "QBForge",
       description:
         "Upcoming project that leverages an LLM to analyze strengths and weaknesses of quiz bowl players and curates study material for them.",
       image: "/images/quiz-bowl.jpeg",

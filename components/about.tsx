@@ -68,10 +68,11 @@ export default function About() {
                 neuroscience and active inference to chemistry and competitive academic pursuits.
               </p>
               <p className="text-foreground/80">
-                Through my internship at the Active Inference Institute and participation in competitions like Quiz Bowl
-                and Science Olympiad, I've developed a unique perspective on problem-solving and scientific inquiry. I'm
+                Through my internship at the Active Inference Institute and participation in activities like Quiz Bowl
+                and Speech and Debate, I've developed a unique perspective on problem-solving and scientific inquiry. I'm
                 particularly interested in how computational models can help us understand complex systems like the
-                human brain.
+                human brain. I'm also interested in UI/UX design and building products that are both functional and
+                aesthetically pleasing.
               </p>
 
               <div>

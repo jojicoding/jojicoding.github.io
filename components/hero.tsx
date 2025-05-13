@@ -93,7 +93,7 @@ export default function Hero() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="block">Hi, I'm</span>
+            <span className="block">Hi, i'm</span>
             <span className="gradient-text">Rohit Shenoy</span>
           </h1>
 

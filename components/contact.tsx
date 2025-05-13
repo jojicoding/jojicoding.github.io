@@ -56,7 +56,7 @@ export default function Contact() {
     {
       icon: MessageSquare,
       title: "Discord",
-      value: "jojigames",
+      value: "jojicoding",
       link: "#", // Discord doesn't have a direct profile link format
     },
     {
@@ -68,8 +68,8 @@ export default function Contact() {
     {
       icon: Github,
       title: "GitHub",
-      value: "jojigames",
-      link: "https://github.com/jojigames",
+      value: "jojicoding",
+      link: "https://github.com/jojicoding",
     },
   ]
 

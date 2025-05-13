@@ -16,23 +16,23 @@ export default function Experience() {
       organization: "Active Inference Institute",
       period: "September 2024 - Present",
       description:
-        "Working on cutting-edge research projects applying active inference principles. First project involved autonomous navigation systems. Currently working on modeling the acetylcholine system of the brain in Alzheimer's disease under the effects of drugs.",
+        "Working on cutting-edge research projects applying active inference principles. First project involved autonomous navigation systems. Currently working on using active inference to model neurodegenerative diseases--more details coming soon.",
       skills: ["Active Inference", "Autonomous Systems", "Neuroscience", "Medical Modeling"],
       icon: Brain,
     },
     {
       title: "Quiz Bowl",
-      organization: "Middle School National Championship Tournament",
+      organization: "History, Fine Arts, and Science",
       period: "2022 - Present",
       description:
-        "Participated in the 2024 Middle School National Championship Tournament. Explored interdisciplinary fields and developed quick critical thinking skills across various subjects including history, science, literature, and arts.",
+        "Participated in the 2024 Middle School National Championship Tournament. Explored interdisciplinary fields and developed quick critical thinking skills across various subjects on both the regional and national level.",
       skills: ["Critical Thinking", "Interdisciplinary Knowledge", "Team Collaboration", "Quick Recall"],
       icon: Award,
     },
     {
       title: "Science Olympiad",
-      organization: "Stanford Invitational",
-      period: "2024 - Present",
+      organization: "Forensics, Chemistry, and Optics",
+      period: "2020 - Present",
       description:
         "Competed in the Stanford Invitational Science Olympiad. Explored chemistry and other scientific disciplines through hands-on experiments and theoretical problem-solving. Developed laboratory skills and scientific reasoning.",
       skills: ["Chemistry", "Laboratory Skills", "Scientific Reasoning", "Team Collaboration"],
@@ -40,10 +40,10 @@ export default function Experience() {
     },
     {
       title: "Speech and Debate",
-      organization: "Ryan Mills Tournament",
+      organization: "LD Debate and Extemporaneous Speaking",
       period: "2024 - Present",
       description:
-        "Participated in Lincoln-Douglas Debate and Extemporaneous Speaking, reaching elimination rounds at the Ryan Mills Tournament. Developed critical thinking, research, and public speaking skills through competitive debate.",
+        "Reached elimination rounds at the Ryan Mills Tournament. Developed critical thinking, research, and public speaking skills through competitive debate.",
       skills: ["Public Speaking", "Critical Thinking", "Argumentation", "Research"],
       icon: Mic,
     },

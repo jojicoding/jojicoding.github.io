@@ -25,8 +25,8 @@ export default function Hero() {
           className="h-full w-full"
           style={{
             backgroundImage: `
-              linear-gradient(to right, rgba(229,231,235,0.22) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(229,231,235,0.22) 1px, transparent 1px)
+              linear-gradient(to right, rgba(120,120,120,0.10) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(120,120,120,0.10) 1px, transparent 1px)
             `,
             backgroundSize: "40px 40px",
           }}

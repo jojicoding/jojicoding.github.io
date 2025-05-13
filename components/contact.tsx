@@ -35,6 +35,12 @@ export default function Contact() {
         description: "Thank you for your message. I'll get back to you soon.",
       });
       e.currentTarget.reset();
+      // Clear all fields manually in case reset doesn't work
+      Array.from(e.currentTarget.elements).forEach((el) => {
+        if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
+          el.value = "";
+        }
+      });
     } else if (formState.errors) {
       toast({
         title: "Error sending message",
@@ -175,7 +181,7 @@ export default function Contact() {
                       </div>
                       <Button
                         type="submit"
-                        className="w-full border border-[#2dd4bf] text-[#2dd4bf] bg-transparent hover:bg-[#2dd4bf]/10 transition-colors px-6 py-3 rounded-md shadow-none"
+                        className="w-full text-[#2dd4bf] bg-transparent hover:bg-[#2dd4bf]/10 transition-colors px-6 py-3 rounded-md border border-[#2dd4bf] shadow-none"
                         disabled={isSubmitting || formState.submitting}
                       >
                         {isSubmitting || formState.submitting ? (

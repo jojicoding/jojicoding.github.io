@@ -101,7 +101,7 @@ export default function Experience() {
                               </div>
                             </div>
                             <Badge variant="outline" className="gradient-border">
-                              <span className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold">{exp.period}</span>
+                              <span className="text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf]">{exp.period}</span>
                             </Badge>
                           </div>
                         </CardHeader>
@@ -150,7 +150,7 @@ export default function Experience() {
                               </div>
                             </div>
                             <Badge variant="outline" className="gradient-border">
-                              <span className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold">{edu.period}</span>
+                              <span className="text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf]">{edu.period}</span>
                             </Badge>
                           </div>
                         </CardHeader>

@@ -15,24 +15,24 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
-      {/* Minimalist dark gray background */}
-      <div className="absolute inset-0 bg-neutral-900 z-0" />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Pure black background */}
+      <div className="absolute inset-0 bg-black z-0" />
+
+      {/* Subtle gray grid pattern */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div
+          className="h-full w-full"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(229,231,235,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(229,231,235,0.07) 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+      </div>
 
       {/* Minimal background elements */}
       <div className="absolute inset-0 z-0">
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="h-full w-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(to right, rgba(45,212,191,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(45,212,191,0.08) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
-
         {/* Abstract shapes */}
         <motion.div
           className="absolute -top-20 -left-20 w-96 h-96 rounded-full"
@@ -97,7 +97,7 @@ export default function Hero() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-neutral-100">
-            <span className="block">Hi, i'm</span>
+            <span className="block">Hi, I'm</span>
             <span className="font-bold" style={{ color: '#2dd4bf' }}>Rohit Shenoy</span>
           </h1>
 

@@ -15,19 +15,19 @@ export default function Hero() {
   if (!mounted) return null
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Minimalist black background */}
-      <div className="absolute inset-0 bg-black z-0" />
+    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
+      {/* Minimalist dark gray background */}
+      <div className="absolute inset-0 bg-neutral-900 z-0" />
 
       {/* Minimal background elements */}
       <div className="absolute inset-0 z-0">
         {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-10">
           <div
             className="h-full w-full"
             style={{
               backgroundImage:
-                "linear-gradient(to right, #2dd4bf 1px, transparent 1px), linear-gradient(to bottom, #2dd4bf 1px, transparent 1px)",
+                "linear-gradient(to right, rgba(45,212,191,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(45,212,191,0.08) 1px, transparent 1px)",
               backgroundSize: "40px 40px",
             }}
           />
@@ -35,10 +35,11 @@ export default function Hero() {
 
         {/* Abstract shapes */}
         <motion.div
-          className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-gradient-start/5 blur-3xl"
+          className="absolute -top-20 -left-20 w-96 h-96 rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(45,212,191,0.10) 0%, transparent 80%)" }}
           animate={{
             scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.15, 0.2, 0.15],
           }}
           transition={{
             duration: 15,
@@ -48,10 +49,11 @@ export default function Hero() {
         />
 
         <motion.div
-          className="absolute -bottom-40 -right-20 w-[30rem] h-[30rem] rounded-full bg-gradient-end/5 blur-3xl"
+          className="absolute -bottom-40 -right-20 w-[30rem] h-[30rem] rounded-full"
+          style={{ background: "radial-gradient(circle, rgba(45,212,191,0.08) 0%, transparent 80%)" }}
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.1, 0.15, 0.1],
           }}
           transition={{
             duration: 20,
@@ -64,12 +66,14 @@ export default function Hero() {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute rounded-full bg-gradient-to-r from-gradient-start/5 to-gradient-end/5"
+            className="absolute rounded-full"
             style={{
               width: `${Math.random() * 400 + 100}px`,
               height: `${Math.random() * 400 + 100}px`,
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
+              background: "radial-gradient(circle, rgba(45,212,191,0.06) 0%, transparent 80%)",
+              opacity: 0.08,
             }}
             animate={{
               y: [0, Math.random() * 50 - 25],
@@ -92,16 +96,16 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-neutral-100">
             <span className="block">Hi, i'm</span>
-            <span className="gradient-text">Rohit Shenoy</span>
+            <span className="font-bold" style={{ color: '#2dd4bf' }}>Rohit Shenoy</span>
           </h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-xl md:text-2xl text-foreground/80 max-w-2xl mx-auto mb-8"
+            className="text-xl md:text-2xl text-neutral-300 max-w-2xl mx-auto mb-10"
           >
             A student exploring the intersections of science, artificial intelligence, and interdisciplinary learning.
           </motion.p>
@@ -110,16 +114,16 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4 mb-12"
+            className="flex flex-wrap justify-center gap-6 mb-14"
           >
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 transition-opacity"
+              className="border border-[#2dd4bf] text-[#2dd4bf] hover:bg-[#2dd4bf]/10 bg-transparent transition-colors px-8 py-3 rounded-md shadow-none"
             >
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="gradient-border">
+            <Button variant="outline" size="lg" asChild className="border border-[#2dd4bf] text-[#2dd4bf] hover:bg-[#2dd4bf]/10 bg-transparent px-8 py-3 rounded-md shadow-none">
               <a href="#projects">View My Work</a>
             </Button>
           </motion.div>
@@ -130,12 +134,12 @@ export default function Hero() {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="flex justify-center space-x-6"
           >
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
               <a href="https://github.com/jojigames" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
               <a
                 href="https://www.linkedin.com/in/rohit-shenoy-75a8ab223/"
                 target="_blank"
@@ -145,7 +149,7 @@ export default function Hero() {
                 <Linkedin className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild>
+            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
               <a href="mailto:rohitshenoy2010@gmail.com" aria-label="Email">
                 <Mail className="h-6 w-6" />
               </a>
@@ -155,7 +159,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Button variant="ghost" size="icon" asChild>
+        <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="h-6 w-6" />
           </a>

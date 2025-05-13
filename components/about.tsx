@@ -34,7 +34,7 @@ export default function About() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            About <span className="gradient-text">Me</span>
+            <span className="font-bold text-[#2dd4bf]">About</span> <span className="font-bold text-neutral-200">Me</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -79,7 +79,7 @@ export default function About() {
                 <h4 className="text-xl font-medium mb-3 gradient-text">My Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-sm gradient-border">
+                    <Badge key={skill} variant="secondary" className="text-sm border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">
                       {skill}
                     </Badge>
                   ))}

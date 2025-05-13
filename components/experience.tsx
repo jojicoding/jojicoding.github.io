@@ -69,7 +69,7 @@ export default function Experience() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            My <span className="gradient-text">Experience</span>
+            <span className="font-bold text-[#2dd4bf]">Experience</span>
           </h2>
 
           <div className="space-y-16">
@@ -88,32 +88,34 @@ export default function Experience() {
                     transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                   >
                     <Card className="gradient-border overflow-hidden bg-card">
-                      <CardHeader>
-                        <div className="flex justify-between items-start">
-                          <div className="flex items-center gap-3">
-                            <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
-                              {exp.icon && <exp.icon className="h-5 w-5 text-background" />}
+                      <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
+                        <CardHeader>
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-center gap-3">
+                              <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
+                                {exp.icon && <exp.icon className="h-5 w-5 text-background" />}
+                              </div>
+                              <div>
+                                <CardTitle>{exp.title}</CardTitle>
+                                <CardDescription>{exp.organization}</CardDescription>
+                              </div>
                             </div>
-                            <div>
-                              <CardTitle>{exp.title}</CardTitle>
-                              <CardDescription>{exp.organization}</CardDescription>
-                            </div>
-                          </div>
-                          <Badge variant="outline" className="gradient-border">
-                            {exp.period}
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80 mb-4">{exp.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {exp.skills.map((skill) => (
-                            <Badge key={skill} variant="secondary" className="text-xs gradient-border">
-                              {skill}
+                            <Badge variant="outline" className="gradient-border">
+                              <span className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold">{exp.period}</span>
                             </Badge>
-                          ))}
-                        </div>
-                      </CardContent>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-foreground/80 mb-4">{exp.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {exp.skills.map((skill) => (
+                              <Badge key={skill} variant="secondary" className="text-xs border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">
+                                {skill}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </div>
                     </Card>
                   </motion.div>
                 ))}
@@ -135,25 +137,27 @@ export default function Experience() {
                     transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                   >
                     <Card className="gradient-border bg-card">
-                      <CardHeader>
-                        <div className="flex justify-between items-start">
-                          <div className="flex items-center gap-3">
-                            <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
-                              <GraduationCap className="h-5 w-5 text-background" />
+                      <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
+                        <CardHeader>
+                          <div className="flex justify-between items-start">
+                            <div className="flex items-center gap-3">
+                              <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
+                                <GraduationCap className="h-5 w-5 text-background" />
+                              </div>
+                              <div>
+                                <CardTitle>{edu.degree}</CardTitle>
+                                <CardDescription>{edu.institution}</CardDescription>
+                              </div>
                             </div>
-                            <div>
-                              <CardTitle>{edu.degree}</CardTitle>
-                              <CardDescription>{edu.institution}</CardDescription>
-                            </div>
+                            <Badge variant="outline" className="gradient-border">
+                              <span className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full text-xs font-semibold">{edu.period}</span>
+                            </Badge>
                           </div>
-                          <Badge variant="outline" className="gradient-border">
-                            {edu.period}
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-foreground/80">{edu.description}</p>
-                      </CardContent>
+                        </CardHeader>
+                        <CardContent>
+                          <p className="text-foreground/80">{edu.description}</p>
+                        </CardContent>
+                      </div>
                     </Card>
                   </motion.div>
                 ))}

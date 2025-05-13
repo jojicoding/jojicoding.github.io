@@ -84,7 +84,7 @@ export default function Contact() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Get in <span className="gradient-text">Touch</span>
+            <span className="font-bold text-[#2dd4bf]">Contact</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -94,31 +94,33 @@ export default function Contact() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Card className="gradient-border bg-card">
-                <CardHeader>
-                  <CardTitle className="gradient-text">Contact Information</CardTitle>
-                  <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {contactItems.map((item, index) => (
-                    <a
-                      key={index}
-                      href={item.link}
-                      target={item.link.startsWith("mailto") ? "_self" : "_blank"}
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-4 group hover:bg-gradient-start/5 p-2 rounded-lg transition-colors"
-                    >
-                      <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
-                        <item.icon className="h-6 w-6 text-background" />
-                      </div>
-                      <div>
-                        <h3 className="text-sm font-medium">{item.title}</h3>
-                        <p className="text-foreground/80 group-hover:text-gradient-start transition-colors">
-                          {item.value}
-                        </p>
-                      </div>
-                    </a>
-                  ))}
-                </CardContent>
+                <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
+                  <CardHeader>
+                    <CardTitle className="gradient-text">Contact Information</CardTitle>
+                    <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    {contactItems.map((item, index) => (
+                      <a
+                        key={index}
+                        href={item.link}
+                        target={item.link.startsWith("mailto") ? "_self" : "_blank"}
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-4 group hover:bg-gradient-start/5 p-2 rounded-lg transition-colors"
+                      >
+                        <div className="bg-gradient-to-r from-gradient-start to-gradient-end p-3 rounded-full">
+                          <item.icon className="h-6 w-6 text-background" />
+                        </div>
+                        <div>
+                          <h3 className="text-sm font-medium text-[#2dd4bf]">{item.title}</h3>
+                          <p className="text-foreground/80 group-hover:text-gradient-start transition-colors">
+                            {item.value}
+                          </p>
+                        </div>
+                      </a>
+                    ))}
+                  </CardContent>
+                </div>
               </Card>
             </motion.div>
 
@@ -128,67 +130,69 @@ export default function Contact() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
               <Card className="gradient-border bg-card">
-                <CardHeader>
-                  <CardTitle className="gradient-text">Send a Message</CardTitle>
-                  <CardDescription>I'll get back to you as soon as possible.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium">
-                          Name
-                        </label>
-                        <Input id="name" name="name" required className="gradient-border bg-secondary" />
-                        <ValidationError prefix="Name" field="name" errors={formState.errors} />
+                <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
+                  <CardHeader>
+                    <CardTitle className="gradient-text">Send a Message</CardTitle>
+                    <CardDescription>I'll get back to you as soon as possible.</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div className="space-y-2">
+                          <label htmlFor="name" className="text-sm font-medium">
+                            Name
+                          </label>
+                          <Input id="name" name="name" required className="gradient-border bg-secondary" />
+                          <ValidationError prefix="Name" field="name" errors={formState.errors} />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="email" className="text-sm font-medium">
+                            Email
+                          </label>
+                          <Input id="email" name="email" type="email" required className="gradient-border bg-secondary" />
+                          <ValidationError prefix="Email" field="email" errors={formState.errors} />
+                        </div>
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">
-                          Email
+                        <label htmlFor="subject" className="text-sm font-medium">
+                          Subject
                         </label>
-                        <Input id="email" name="email" type="email" required className="gradient-border bg-secondary" />
-                        <ValidationError prefix="Email" field="email" errors={formState.errors} />
+                        <Input id="subject" name="subject" required className="gradient-border bg-secondary" />
+                        <ValidationError prefix="Subject" field="subject" errors={formState.errors} />
                       </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Subject
-                      </label>
-                      <Input id="subject" name="subject" required className="gradient-border bg-secondary" />
-                      <ValidationError prefix="Subject" field="subject" errors={formState.errors} />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message
-                      </label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        rows={5}
-                        required
-                        className="gradient-border bg-secondary"
-                      />
-                      <ValidationError prefix="Message" field="message" errors={formState.errors} />
-                    </div>
-                    <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-gradient-start to-gradient-end hover:opacity-90 transition-opacity"
-                      disabled={isSubmitting || formState.submitting}
-                    >
-                      {isSubmitting || formState.submitting ? (
-                        <span className="flex items-center gap-2">
-                          <span className="animate-spin h-4 w-4 border-2 border-current border-t-transparent rounded-full" />
-                          Sending...
-                        </span>
-                      ) : (
-                        <span className="flex items-center gap-2">
-                          <Send className="h-4 w-4" />
-                          Send Message
-                        </span>
-                      )}
-                    </Button>
-                  </form>
-                </CardContent>
+                      <div className="space-y-2">
+                        <label htmlFor="message" className="text-sm font-medium">
+                          Message
+                        </label>
+                        <Textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          required
+                          className="gradient-border bg-secondary"
+                        />
+                        <ValidationError prefix="Message" field="message" errors={formState.errors} />
+                      </div>
+                      <Button
+                        type="submit"
+                        className="w-full border border-[#2dd4bf] text-[#2dd4bf] bg-transparent hover:bg-[#2dd4bf]/10 transition-colors px-6 py-3 rounded-md shadow-none"
+                        disabled={isSubmitting || formState.submitting}
+                      >
+                        {isSubmitting || formState.submitting ? (
+                          <span className="flex items-center gap-2">
+                            <span className="animate-spin h-4 w-4 border-2 border-current border-t-transparent rounded-full" />
+                            Sending...
+                          </span>
+                        ) : (
+                          <span className="flex items-center gap-2">
+                            <Send className="h-4 w-4" />
+                            Send Message
+                          </span>
+                        )}
+                      </Button>
+                    </form>
+                  </CardContent>
+                </div>
               </Card>
             </motion.div>
           </div>

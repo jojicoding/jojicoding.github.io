@@ -41,7 +41,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <nav className="flex items-center justify-between">
           <Link href="/" className="text-xl font-bold">
-            <span className="gradient-text">Rohit Shenoy</span>
+            <span className="font-bold text-[#2dd4bf]">Rohit Shenoy</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,6 +51,9 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 className="text-foreground/80 hover:text-gradient-start transition-colors"
+                style={{ transition: 'color 0.2s', color: '#e5e7eb' }}
+                onMouseOver={e => e.currentTarget.style.color = '#2dd4bf'}
+                onMouseOut={e => e.currentTarget.style.color = '#e5e7eb'}
               >
                 {link.name}
               </Link>

@@ -65,7 +65,7 @@ export default function Projects() {
           className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            My <span className="gradient-text">Projects</span>
+            <span className="font-bold text-[#2dd4bf]">Projects</span>
           </h2>
 
           <div className="relative">
@@ -76,7 +76,7 @@ export default function Projects() {
               >
                 {projects.map((project, index) => (
                   <div key={index} className="w-full flex-shrink-0 px-4">
-                    <Card className="overflow-hidden gradient-border bg-card">
+                    <Card className="overflow-hidden border border-[#2dd4bf] bg-card rounded-xl">
                       <div className="relative h-[300px] md:h-[400px] overflow-hidden">
                         <Image
                           src={project.image || "/placeholder.svg"}
@@ -88,12 +88,12 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                         {project.unfinished && (
                           <div className="absolute top-4 right-4">
-                            <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500">In Progress</Badge>
+                            <Badge className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">In Progress</Badge>
                           </div>
                         )}
                         {project.comingSoon && (
                           <div className="absolute top-4 right-4">
-                            <Badge className="bg-blue-500/20 text-blue-300 border-blue-500">Coming Soon</Badge>
+                            <Badge className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">Coming Soon</Badge>
                           </div>
                         )}
                       </div>
@@ -104,7 +104,7 @@ export default function Projects() {
                       <CardContent>
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary" className="gradient-border">
+                            <Badge key={tag} variant="secondary" className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">
                               {tag}
                             </Badge>
                           ))}
@@ -112,7 +112,7 @@ export default function Projects() {
                       </CardContent>
                       {project.hasCode && (
                         <CardFooter className="flex justify-start">
-                          <Button variant="outline" size="sm" asChild className="gradient-border">
+                          <Button variant="outline" size="sm" asChild className="border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-4 py-2 rounded-md hover:bg-[#2dd4bf]/10">
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                               <Github className="mr-2 h-4 w-4" />
                               Code

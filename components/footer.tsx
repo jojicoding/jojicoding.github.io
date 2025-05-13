@@ -9,12 +9,12 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Link href="/" className="text-xl font-bold">
-              <span className="gradient-text">Rohit Shenoy</span>
+              <span className="font-bold text-[#2dd4bf]">Rohit Shenoy</span>
             </Link>
           </div>
 
           <div className="text-sm text-foreground/70">
-            <span>© {currentYear} Rohit Shenoy</span>
+            <span className="text-[#2dd4bf]">© {currentYear} Rohit Shenoy</span>
           </div>
         </div>
 

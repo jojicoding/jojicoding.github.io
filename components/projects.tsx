@@ -23,6 +23,7 @@ export default function Projects() {
       tags: ["Active Inference", "Autonomous Systems", "Research", "Science Fair"],
       githubUrl: "https://github.com/jojigames/Active-Inference-AutoNav-2025",
       hasCode: true,
+      unfinished: false,
     },
     {
       title: "Neuroscience Research",
@@ -32,6 +33,7 @@ export default function Projects() {
       tags: ["Neuroscience", "Artificial Intelligence", "Research", "Science Fair"],
       githubUrl: "https://github.com/jojicoding/Science-Fair-2026",
       comingSoon: true,
+      unfinished: true,
     },
     {
       title: "QBForge",
@@ -40,6 +42,7 @@ export default function Projects() {
       image: "/images/quiz-bowl.jpeg",
       tags: ["LLM", "Quiz Bowl", "Education", "AI"],
       comingSoon: true,
+      unfinished: true,
     },
   ]
 

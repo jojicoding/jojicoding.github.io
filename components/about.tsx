@@ -79,7 +79,7 @@ export default function About() {
                 <h4 className="text-xl font-medium mb-3 gradient-text">My Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
-                    <Badge key={skill} variant="secondary" className="text-sm border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">
+                    <Badge key={skill} variant="secondary" className="text-sm border border-[#2dd4bf] text-white bg-transparent px-3 py-1 rounded-full">
                       {skill}
                     </Badge>
                   ))}

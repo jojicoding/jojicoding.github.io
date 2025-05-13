@@ -126,7 +126,7 @@ export default function Projects() {
               </div>
             </div>
 
-            <div className="flex justify-center mt-16 gap-4">
+            <div className="flex justify-center mt-16 gap-4 items-center">
               <Button
                 variant="outline"
                 size="icon"
@@ -137,20 +137,22 @@ export default function Projects() {
                 <ChevronLeft className="h-4 w-4" />
               </Button>
 
-              <div className="flex gap-2">
-                {projects.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setActiveProject(index)}
-                    className={cn(
-                      "w-3 h-3 rounded-full transition-colors",
-                      index === activeProject
-                        ? "bg-gradient-to-r from-gradient-start to-gradient-end"
-                        : "bg-muted-foreground/30",
-                    )}
-                    aria-label={`Go to project ${index + 1}`}
-                  />
-                ))}
+              <div className="flex flex-col justify-center">
+                <div className="flex gap-2 mt-0" style={{ marginTop: '0.5rem' }}>
+                  {projects.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveProject(index)}
+                      className={cn(
+                        "w-3 h-3 rounded-full transition-colors",
+                        index === activeProject
+                          ? "bg-gradient-to-r from-gradient-start to-gradient-end"
+                          : "bg-[#e5e7eb] opacity-80",
+                      )}
+                      aria-label={`Go to project ${index + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
 
               <Button

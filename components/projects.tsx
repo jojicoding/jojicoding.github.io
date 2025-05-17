@@ -65,7 +65,7 @@ export default function Projects() {
           className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="font-bold text-[#2dd4bf]">Projects</span>
+            <span className="font-bold text-[#2dd4bf] font-alpina italic">Projects</span>
           </h2>
 
           <div className="relative">
@@ -98,7 +98,7 @@ export default function Projects() {
                         )}
                       </div>
                       <CardHeader>
-                        <CardTitle className="gradient-text">{project.title}</CardTitle>
+                        <CardTitle className="gradient-text font-alpina italic">{project.title}</CardTitle>
                         <CardDescription className="text-foreground/70">{project.description}</CardDescription>
                       </CardHeader>
                       <CardContent>

@@ -34,7 +34,7 @@ export default function About() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="font-bold text-[#2dd4bf]">About</span> <span className="font-bold text-neutral-200">Me</span>
+            <span className="font-bold text-[#2dd4bf] font-alpina italic">About</span> <span className="font-bold text-neutral-200 font-alpina italic">Me</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -61,7 +61,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="space-y-6"
             >
-              <h3 className="text-2xl font-semibold gradient-text">Who am I?</h3>
+              <h3 className="text-2xl font-semibold gradient-text font-alpina italic">Who am I?</h3>
               <p className="text-foreground/80">
                 I'm a student at Bellarmine College Preparatory, Class of 2028, passionate about exploring the
                 intersections of science, technology, and interdisciplinary learning. My interests span from
@@ -76,7 +76,7 @@ export default function About() {
               </p>
 
               <div>
-                <h4 className="text-xl font-medium mb-3 gradient-text">My Skills</h4>
+                <h4 className="text-xl font-medium mb-3 gradient-text font-alpina italic">My Skills</h4>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (
                     <Badge key={skill} variant="secondary" className="text-sm border border-[#2dd4bf] text-white bg-transparent px-3 py-1 rounded-full font-mono uppercase">

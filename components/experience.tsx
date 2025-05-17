@@ -69,14 +69,14 @@ export default function Experience() {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="font-bold text-[#2dd4bf]">Experience</span>
+            <span className="font-bold text-[#2dd4bf] font-alpina italic">Experience</span>
           </h2>
 
           <div className="space-y-16">
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <Briefcase className="h-6 w-6 gradient-text" />
-                <h3 className="text-2xl font-semibold">Experiences</h3>
+                <h3 className="text-2xl font-semibold font-alpina italic">Experiences</h3>
               </div>
 
               <div className="space-y-6">
@@ -96,7 +96,7 @@ export default function Experience() {
                                 {exp.icon && <exp.icon className="h-5 w-5 text-background" />}
                               </div>
                               <div>
-                                <CardTitle>{exp.title}</CardTitle>
+                                <CardTitle className="font-alpina italic">{exp.title}</CardTitle>
                                 <CardDescription>{exp.organization}</CardDescription>
                               </div>
                             </div>
@@ -125,7 +125,7 @@ export default function Experience() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <GraduationCap className="h-6 w-6 gradient-text" />
-                <h3 className="text-2xl font-semibold">Education</h3>
+                <h3 className="text-2xl font-semibold font-alpina italic">Education</h3>
               </div>
 
               <div className="space-y-6">
@@ -145,8 +145,8 @@ export default function Experience() {
                                 <GraduationCap className="h-5 w-5 text-background" />
                               </div>
                               <div>
-                                <CardTitle className="font-alpina">{edu.degree}</CardTitle>
-                                <CardDescription className="font-mono">{edu.institution}</CardDescription>
+                                <CardTitle className="font-alpina italic">{edu.degree}</CardTitle>
+                                <CardDescription>{edu.institution}</CardDescription>
                               </div>
                             </div>
                             <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf] font-mono">

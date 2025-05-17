@@ -76,7 +76,7 @@ export default function Experience() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <Briefcase className="h-6 w-6 gradient-text" />
-                <h3 className="text-2xl font-semibold">Experiences</h3>
+                <h3 className="text-2xl font-semibold alpina italic">Experiences</h3>
               </div>
 
               <div className="space-y-6">
@@ -109,7 +109,7 @@ export default function Experience() {
                           <p className="text-foreground/80 mb-4">{exp.description}</p>
                           <div className="flex flex-wrap gap-2">
                             {exp.skills.map((skill) => (
-                              <Badge key={skill} variant="secondary" className="text-xs border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full font-mono uppercase">
+                              <Badge key={skill} variant="secondary" className="text-xs border border-[#2dd4bf] bg-transparent px-3 py-1 rounded-full font-mono uppercase">
                                 {skill}
                               </Badge>
                             ))}
@@ -145,11 +145,11 @@ export default function Experience() {
                                 <GraduationCap className="h-5 w-5 text-background" />
                               </div>
                               <div>
-                                <CardTitle className="font-alpina">{edu.degree}</CardTitle>
+                                <CardTitle>{edu.degree}</CardTitle>
                                 <CardDescription>{edu.institution}</CardDescription>
                               </div>
                             </div>
-                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf] font-mono">
+                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf] font-mono uppercase">
                               {edu.period}
                             </Badge>
                           </div>

@@ -98,7 +98,7 @@ export default function Projects() {
                         )}
                       </div>
                       <CardHeader>
-                        <CardTitle className="gradient-text font-alpina">{project.title}</CardTitle>
+                        <CardTitle className="gradient-text font-alpina italic">{project.title}</CardTitle>
                         <CardDescription className="text-foreground/70">{project.description}</CardDescription>
                       </CardHeader>
                       <CardContent>

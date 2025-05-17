@@ -102,7 +102,7 @@ export default function Contact() {
               <Card className="gradient-border bg-card">
                 <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
                   <CardHeader>
-                    <CardTitle className="gradient-text font-alpina italic">Contact Information</CardTitle>
+                    <CardTitle className="font-alpina italic">Contact Information</CardTitle>
                     <CardDescription>Feel free to reach out through any of these channels.</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
@@ -138,7 +138,7 @@ export default function Contact() {
               <Card className="gradient-border bg-card">
                 <div className='border border-[#2dd4bf] rounded-xl p-1 h-full w-full'>
                   <CardHeader>
-                    <CardTitle className="gradient-text font-alpina italic">Send a Message</CardTitle>
+                    <CardTitle className="font-alpina italic">Send a Message</CardTitle>
                     <CardDescription>I'll get back to you as soon as possible.</CardDescription>
                   </CardHeader>
                   <CardContent>

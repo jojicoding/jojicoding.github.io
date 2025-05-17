@@ -100,7 +100,7 @@ export default function Experience() {
                                 <CardDescription>{exp.organization}</CardDescription>
                               </div>
                             </div>
-                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf]">
+                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf] font-mono uppercase">
                               {exp.period}
                             </Badge>
                           </div>
@@ -109,7 +109,7 @@ export default function Experience() {
                           <p className="text-foreground/80 mb-4">{exp.description}</p>
                           <div className="flex flex-wrap gap-2">
                             {exp.skills.map((skill) => (
-                              <Badge key={skill} variant="secondary" className="text-xs border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full">
+                              <Badge key={skill} variant="secondary" className="text-xs border border-[#2dd4bf] text-[#2dd4bf] bg-transparent px-3 py-1 rounded-full font-mono uppercase">
                                 {skill}
                               </Badge>
                             ))}
@@ -145,11 +145,11 @@ export default function Experience() {
                                 <GraduationCap className="h-5 w-5 text-background" />
                               </div>
                               <div>
-                                <CardTitle>{edu.degree}</CardTitle>
-                                <CardDescription>{edu.institution}</CardDescription>
+                                <CardTitle className="font-alpina">{edu.degree}</CardTitle>
+                                <CardDescription className="font-mono">{edu.institution}</CardDescription>
                               </div>
                             </div>
-                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf]">
+                            <Badge variant="outline" className="text-white bg-transparent px-3 py-1 rounded-full text-xs font-semibold border border-[#2dd4bf] font-mono">
                               {edu.period}
                             </Badge>
                           </div>

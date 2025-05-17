@@ -63,6 +63,11 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      fontFamily: {
+        sans: ["system-ui", "sans-serif"],
+        alpina: ["GT Alpina", "serif"],
+        mono: ["ABC Favorit Mono", "monospace"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

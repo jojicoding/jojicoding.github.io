@@ -61,3 +61,32 @@
   mask-composite: exclude;
   pointer-events: none;
 }
+
+/* Import GT Alpina font */
+@font-face {
+  font-family: 'GT Alpina';
+  src: url('/fonts/gt_alpina-webfont.woff2') format('woff2'),
+       url('/fonts/gt_alpina-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Alpina';
+  src: url('/fonts/gt_alpina_regular_italic-webfont.woff2') format('woff2'),
+       url('/fonts/gt_alpina_regular_italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Import ABC Favorit Mono font */
+@font-face {
+  font-family: 'ABC Favorit Mono';
+  src: url('/fonts/abcfavoritmono-regular-webfont.woff2') format('woff2'),
+       url('/fonts/abcfavoritmono-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

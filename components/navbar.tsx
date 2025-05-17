@@ -50,7 +50,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-foreground/80 hover:text-gradient-start transition-colors"
+                className="text-foreground/80 hover:text-gradient-start transition-colors font-mono uppercase"
                 style={{ transition: 'color 0.2s', color: '#e5e7eb' }}
                 onMouseOver={e => e.currentTarget.style.color = '#2dd4bf'}
                 onMouseOut={e => e.currentTarget.style.color = '#e5e7eb'}
@@ -103,7 +103,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-foreground/80 hover:text-gradient-start py-2 transition-colors"
+                className="text-foreground/80 hover:text-gradient-start py-2 transition-colors font-mono uppercase"
                 onClick={closeMenu}
               >
                 {link.name}

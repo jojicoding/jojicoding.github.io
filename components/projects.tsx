@@ -104,7 +104,7 @@ export default function Projects() {
                       <CardContent>
                         <div className="flex flex-wrap gap-2 mb-4">
                           {project.tags.map((tag) => (
-                            <Badge key={tag} variant="secondary" className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">
+                            <Badge key={tag} variant="secondary" className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf] font-mono uppercase">
                               {tag}
                             </Badge>
                           ))}

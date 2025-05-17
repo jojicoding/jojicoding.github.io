@@ -118,7 +118,7 @@ export default function Contact() {
                           <item.icon className="h-6 w-6 text-background" />
                         </div>
                         <div>
-                          <h3 className="text-sm font-medium text-[#2dd4bf]">{item.title}</h3>
+                          <h3 className="text-sm font-medium text-[#2dd4bf] font-mono uppercase">{item.title}</h3>
                           <p className="text-foreground/80 group-hover:text-gradient-start transition-colors">
                             {item.value}
                           </p>
@@ -145,14 +145,14 @@ export default function Contact() {
                     <form onSubmit={handleSubmit} className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <label htmlFor="name" className="text-sm font-medium">
+                          <label htmlFor="name" className="text-sm font-medium font-mono uppercase">
                             Name
                           </label>
                           <Input id="name" name="name" required className="gradient-border bg-secondary" />
                           <ValidationError prefix="Name" field="name" errors={formState.errors} />
                         </div>
                         <div className="space-y-2">
-                          <label htmlFor="email" className="text-sm font-medium">
+                          <label htmlFor="email" className="text-sm font-medium font-mono uppercase">
                             Email
                           </label>
                           <Input id="email" name="email" type="email" required className="gradient-border bg-secondary" />
@@ -160,14 +160,14 @@ export default function Contact() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="subject" className="text-sm font-medium">
+                        <label htmlFor="subject" className="text-sm font-medium font-mono uppercase">
                           Subject
                         </label>
                         <Input id="subject" name="subject" required className="gradient-border bg-secondary" />
                         <ValidationError prefix="Subject" field="subject" errors={formState.errors} />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="message" className="text-sm font-medium">
+                        <label htmlFor="message" className="text-sm font-medium font-mono uppercase">
                           Message
                         </label>
                         <Textarea

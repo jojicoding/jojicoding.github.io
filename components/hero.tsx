@@ -98,9 +98,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-neutral-100">
-            <span className="block">Hi, I'm</span>
-            <span className="font-bold" style={{ color: '#2dd4bf' }}>Rohit Shenoy</span>
+          <h1 className="text-4xl md:text-6xl mb-6 text-neutral-100">
+            <span className="block font-normal font-alpina">Hi, I'm</span>
+            <span className="italic font-alpina text-[#2dd4bf]">Rohit Shenoy</span>
           </h1>
 
           <motion.p

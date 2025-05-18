@@ -76,7 +76,7 @@ export default function Experience() {
             <div>
               <div className="flex items-center gap-3 mb-8">
                 <Briefcase className="h-6 w-6 gradient-text" />
-                <h3 className="text-2xl font-semibold alpina italic">Experiences</h3>
+                <h3 className="text-2xl font-alpina italic semibold">Experiences</h3>
               </div>
 
               <div className="space-y-6">

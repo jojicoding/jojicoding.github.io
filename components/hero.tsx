@@ -99,10 +99,9 @@ export default function Hero() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl mb-6 text-neutral-100">
-            <span className="block font-normal">Hi, I'm</span>
+            <span className="block font-normal text-neutral-300">Hi, I'm</span>
             <span className="italic font-alpina text-[#2dd4bf] relative">
               Rohit Shenoy
-              <span className="absolute left-0 bottom-1 w-full h-2 bg-[#2dd4bf]/20 -z-10 rounded-full"></span>
             </span>
           </h1>
 
@@ -184,16 +183,9 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="absolute bottom-10 left-0 right-0 mx-auto flex justify-center animate-bounce"
       >
-        <Button 
-          variant="outline" 
-          size="icon" 
-          asChild 
-          className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
-        >
-          <a href="#about" aria-label="Scroll down">
-            <ArrowDown className="h-6 w-6" />
-          </a>
-        </Button>
+        <a href="#about" aria-label="Scroll down" className="text-[#2dd4bf] hover:text-white transition-colors">
+          <ArrowDown className="h-6 w-6" />
+        </a>
       </motion.div>
     </section>
   )

@@ -141,7 +141,7 @@ export default function Contact() {
                     </div>
                     <Button
                       type="submit"
-                      className="w-full text-[#2dd4bf] bg-transparent hover:bg-[#2dd4bf]/10 transition-colors px-6 py-3 rounded-md border border-[#2dd4bf] shadow-none"
+                      className="w-full text-white bg-transparent hover:bg-[#2dd4bf]/10 transition-colors px-6 py-3 rounded-md border border-[#2dd4bf] shadow-none"
                       disabled={isSubmitting || formState.submitting}
                     >
                       {isSubmitting || formState.submitting ? (
@@ -157,27 +157,6 @@ export default function Contact() {
                       )}
                     </Button>
                   </form>
-
-                  <div className="mt-8 flex justify-center space-x-6">
-                    {socialLinks.map((item, index) => (
-                      <Button
-                        key={index}
-                        variant="outline"
-                        size="icon"
-                        asChild
-                        className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
-                      >
-                        <a
-                          href={item.link}
-                          target={item.link.startsWith("mailto") ? "_self" : "_blank"}
-                          rel="noopener noreferrer"
-                          aria-label={item.title}
-                        >
-                          <item.icon className="h-6 w-6" />
-                        </a>
-                      </Button>
-                    ))}
-                  </div>
                 </CardContent>
               </div>
             </Card>

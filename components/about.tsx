@@ -76,9 +76,8 @@ export default function About() {
               </p>
 
               <div>
-                <h4 className="text-xl font-medium mb-3 gradient-text font-alpina italic relative inline-block">
+                <h4 className="text-xl font-medium mb-3 gradient-text font-alpina italic">
                   My Skills
-                  <span className="absolute left-0 right-0 bottom-0 h-1 bg-[#2dd4bf]/30 rounded-full"></span>
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill) => (

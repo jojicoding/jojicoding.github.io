@@ -20,12 +20,7 @@ export default function Footer() {
 			icon: Mail,
 			title: "Email",
 			link: "mailto:rohitshenoy2010@gmail.com",
-		},
-		{
-			icon: Twitter,
-			title: "Twitter",
-			link: "https://twitter.com/X",
-		},
+		}
 	]
 
 	return (
@@ -33,7 +28,7 @@ export default function Footer() {
 			<div className="container mx-auto px-4">
 				<div className="flex flex-col items-center justify-center mb-8">
 					<Link href="/" className="text-xl font-bold">
-						<span className="font-bold text-[#2dd4bf]">Rohit Shenoy</span>
+						<span className="font-bold text-white">Rohit Shenoy</span>
 					</Link>
 				</div>
 

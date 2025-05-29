@@ -99,8 +99,11 @@ export default function Hero() {
           className="text-center"
         >
           <h1 className="text-4xl md:text-6xl mb-6 text-neutral-100">
-            <span className="block font-normal font-alpina">Hi, I'm</span>
-            <span className="italic font-alpina text-[#2dd4bf]">Rohit Shenoy</span>
+            <span className="block font-normal">Hi, I'm</span>
+            <span className="italic font-alpina text-[#2dd4bf] relative">
+              Rohit Shenoy
+              <span className="absolute left-0 bottom-1 w-full h-2 bg-[#2dd4bf]/20 -z-10 rounded-full"></span>
+            </span>
           </h1>
 
           <motion.p
@@ -136,12 +139,22 @@ export default function Hero() {
             transition={{ delay: 0.9, duration: 0.8 }}
             className="flex justify-center space-x-6"
           >
-            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              asChild 
+              className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
+            >
               <a href="https://github.com/jojigames" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              asChild 
+              className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
+            >
               <a
                 href="https://www.linkedin.com/in/rohit-shenoy-75a8ab223/"
                 target="_blank"
@@ -151,7 +164,12 @@ export default function Hero() {
                 <Linkedin className="h-6 w-6" />
               </a>
             </Button>
-            <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
+            <Button 
+              variant="outline" 
+              size="icon" 
+              asChild 
+              className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
+            >
               <a href="mailto:rohitshenoy2010@gmail.com" aria-label="Email">
                 <Mail className="h-6 w-6" />
               </a>
@@ -160,13 +178,23 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Button variant="ghost" size="icon" asChild className="text-[#2dd4bf] hover:text-white">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-10 left-0 right-0 mx-auto flex justify-center animate-bounce"
+      >
+        <Button 
+          variant="outline" 
+          size="icon" 
+          asChild 
+          className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
+        >
           <a href="#about" aria-label="Scroll down">
             <ArrowDown className="h-6 w-6" />
           </a>
         </Button>
-      </div>
+      </motion.div>
     </section>
   )
 }

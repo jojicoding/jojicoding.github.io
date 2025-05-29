@@ -112,7 +112,7 @@ export default function Projects() {
                       </CardContent>
                       {project.hasCode && (
                         <CardFooter className="flex justify-start">
-                          <Button variant="outline" size="sm" asChild className="text-white bg-transparent px-4 py-2 rounded-md border border-[#2dd4bf] hover:bg-[#2dd4bf]/10">
+                          <Button variant="outline" size="sm" asChild className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 bg-transparent px-4 py-2 rounded-md border border-[#2dd4bf] transition-colors">
                             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                               <Github className="mr-2 h-4 w-4" />
                               Code
@@ -132,13 +132,13 @@ export default function Projects() {
                 size="icon"
                 onClick={prevProject}
                 aria-label="Previous project"
-                className="gradient-border"
+                className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
 
-              <div className="flex flex-col justify-center">
-                <div className="flex gap-2 mt-0" style={{ marginTop: '0.5rem' }}>
+              <div className="flex items-center">
+                <div className="flex gap-2">
                   {projects.map((_, index) => (
                     <button
                       key={index}
@@ -160,7 +160,7 @@ export default function Projects() {
                 size="icon"
                 onClick={nextProject}
                 aria-label="Next project"
-                className="gradient-border"
+                className="text-white hover:text-white active:bg-[#2dd4bf]/20 focus:bg-[#2dd4bf]/20 border border-[#2dd4bf] bg-transparent transition-colors rounded-md"
               >
                 <ChevronRight className="h-4 w-4" />
               </Button>

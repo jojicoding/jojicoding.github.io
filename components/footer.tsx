@@ -53,11 +53,7 @@ export default function Footer() {
 					))}
 				</div>
 
-				<div className="text-center">
-					<p className="text-sm text-foreground/70">
-						<span className="text-[#2dd4bf]">© {currentYear} Rohit Shenoy</span>
-					</p>
-				</div>
+
 			</div>
 		</footer>
 	)

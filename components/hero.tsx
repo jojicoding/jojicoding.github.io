@@ -123,11 +123,11 @@ export default function Hero() {
             <Button
               asChild
               size="lg"
-              className="border border-[#2dd4bf] text-[#2dd4bf] hover:bg-[#2dd4bf]/10 bg-transparent transition-colors px-8 py-3 rounded-md shadow-none"
+              className="border border-[#2dd4bf] text-white hover:bg-[#2dd4bf]/10 bg-transparent transition-colors px-8 py-3 rounded-md shadow-none"
             >
               <a href="#contact">Get in Touch</a>
             </Button>
-            <Button variant="outline" size="lg" asChild className="border border-[#2dd4bf] text-[#2dd4bf] hover:bg-[#2dd4bf]/10 bg-transparent px-8 py-3 rounded-md shadow-none">
+            <Button variant="outline" size="lg" asChild className="border border-[#2dd4bf] text-white hover:bg-[#2dd4bf]/10 bg-transparent px-8 py-3 rounded-md shadow-none">
               <a href="#projects">View My Work</a>
             </Button>
           </motion.div>

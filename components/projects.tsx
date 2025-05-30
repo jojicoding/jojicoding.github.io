@@ -88,14 +88,10 @@ export default function Projects() {
                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                         {project.unfinished && (
                           <div className="absolute top-4 right-4">
-                            <Badge className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">In Progress</Badge>
+                            <Badge className="text-white bg-black/90 px-3 py-1.5 rounded-full border-2 border-[#2dd4bf] font-semibold shadow-lg text-sm">In Progress</Badge>
                           </div>
                         )}
-                        {project.comingSoon && (
-                          <div className="absolute top-4 right-4">
-                            <Badge className="text-white bg-transparent px-3 py-1 rounded-full border border-[#2dd4bf]">Coming Soon</Badge>
-                          </div>
-                        )}
+                        {/* Removed Coming Soon badge */}
                       </div>
                       <CardHeader>
                         <CardTitle className="gradient-text">{project.title}</CardTitle>

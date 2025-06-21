@@ -15,12 +15,12 @@ const nextConfig = {
       },
     ],
   },
-  output: 'export',
-  distDir: 'out',
-  // Default basePath is fine for GitHub Pages
+  // For Vercel deployment, you don't need these export settings
+  // They're only needed for GitHub Pages
+  // output: 'export',
+  // distDir: 'out',
+  // Use trailing slash for consistency
   trailingSlash: true,
-  // Disable assetPrefix for username.github.io sites
-  assetPrefix: '',
 }
 
 export default nextConfig

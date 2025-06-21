@@ -7,7 +7,8 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // For Vercel, we can use their image optimization
+    unoptimized: false,
     remotePatterns: [
       {
         protocol: 'https',
@@ -15,11 +16,8 @@ const nextConfig = {
       },
     ],
   },
-  // For Vercel deployment, you don't need these export settings
-  // They're only needed for GitHub Pages
-  // output: 'export',
-  // distDir: 'out',
-  // Use trailing slash for consistency
+  // Vercel-optimized settings
+  swcMinify: true,
   trailingSlash: true,
 }
 
